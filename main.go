@@ -1,6 +1,6 @@
 package main
 
-import "./cmd"
+import "buildkit_utils/cmd"
 
 func main() {
 	cmd.Execute()

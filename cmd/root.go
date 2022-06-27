@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"buildkit_utils/cmd/hash"
+
 	"github.com/spf13/cobra"
 )
 
@@ -12,7 +14,7 @@ var rootCmd = &cobra.Command{
 }
 
 func Execute() {
-	rootCmd.AddCommand(frontendCmd())
+	rootCmd.AddCommand(hash.HashCmd())
 	if err := rootCmd.Execute(); err != nil {
 		panic(err)
 	}
